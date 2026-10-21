@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" width="360" height="330" font-family="sans-serif" font-size="14">
+  <rect x="0" y="0" width="360" height="330" fill="#ffffff"/>
+  <rect x="12" y="10" width="336" height="112" rx="6" fill="#ffffff" stroke="#555555" stroke-width="1.5"/>
+  <text x="24" y="32" fill="#111111">the sketch</text>
+  <rect x="24" y="50" width="98" height="56" rx="5" fill="#d7f0dc" stroke="#1b7a34" stroke-width="2"/>
+  <text x="73" y="83" text-anchor="middle" fill="#111111">+ a line</text>
+  <rect x="131" y="50" width="98" height="56" rx="5" fill="#fbdcd3" stroke="#c2410c" stroke-width="2"/>
+  <text x="180" y="83" text-anchor="middle" fill="#111111">- a line</text>
+  <rect x="238" y="50" width="98" height="56" rx="5" fill="#ffffff" stroke="#555555" stroke-width="1.5"/>
+  <text x="287" y="83" text-anchor="middle" fill="#111111">a line</text>
+  <g stroke="#555555" stroke-width="1.5" fill="#555555">
+    <line x1="73" y1="122" x2="73" y2="252"/>
+    <polygon points="67,252 79,252 73,262" stroke="none"/>
+    <line x1="180" y1="122" x2="180" y2="252"/>
+    <polygon points="174,252 186,252 180,262" stroke="none"/>
+    <line x1="287" y1="122" x2="287" y2="252"/>
+    <polygon points="281,252 293,252 287,262" stroke="none"/>
+  </g>
+  <g fill="#111111" font-size="13">
+    <text x="81" y="178">is drawn</text>
+    <text x="81" y="195">green</text>
+    <text x="188" y="178">is drawn</text>
+    <text x="188" y="195">red</text>
+    <text x="295" y="178">is drawn</text>
+    <text x="295" y="195">plain</text>
+  </g>
+  <rect x="12" y="262" width="336" height="52" rx="6" fill="#ffffff" stroke="#555555" stroke-width="1.5"/>
+  <text x="180" y="293" text-anchor="middle" fill="#111111">the figure</text>
+</svg>
