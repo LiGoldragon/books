@@ -378,3 +378,31 @@ ethos-zero 'Generate.{ /abs/orchestrate.ethos /abs/out }'
 
 + A committed record beside the outputs names every input of generation by its fingerprint. The test regenerates, then compares the record and the outputs with the committed ones, and refuses a difference in any.
 + The test also changes each input in turn, the source, the outside type paths, their published stored shapes and the emitter's settings, and expects a refusal.
+
+### Proposal 22: Add · mind-context › inquiry/memory-descriptor-consumers.md, a new file
+
+**Comment** Coverage, asked by Primary 33eea6: who consumes Memory descriptors today, and which of them are frozen or legacy. It sets the measured scope against Inquiries 1 to 4 and brings two unmeasured questions plainly to the living. Counts were re-checked against the repositories on 2026-10-23; one earlier count is corrected below.
+
++ ---
++ description: Which consumers of Memory descriptors exist, which are frozen or legacy, and two questions that could not be measured.
++ ---
++
++ Terms.
++ - Consumer: a repository that generates from a Memory file, implements the table specification, or depends on ethos-zero or on the memory engine.
++ - Hand-built descriptor: a table descriptor written in Rust by the component, not generated from a Memory file.
++ - Frozen reference: a repository its own documents state is kept for reading and not developed.
++ - Legacy topology: the older arrangement of components that the migration is to replace.
++
++ Measured now.
++ - ethos-zero emits from a Memory file its record types alone: no table specification and no memory-trait implementation.
++ - The only implementer of the table specification is a hand-authored test fixture in the memory engine, copied into its work checkout.
++ - One component generates from a Memory file: message-nexus. It is pinned to ethos-zero c2653dd, before the migration, and builds its table descriptor by hand.
++ - Seventeen repositories depend on the memory engine, and all seventeen build descriptors by hand. Twelve are active on the legacy topology; introspect is adopted, mirror is deprecated, memory-storage is a frozen reference, and orchestrate and flow state no status.
++ - Other frozen references: core-ethos, core-schema, ethos-engine, signal-memory-storage, tree-sitter-ethos, spirit-ethos and signal-ethos.
++ - Fifty-two repositories depend on ethos-zero, in fifty-eight manifests; fifty-five pin a revision, at seven different revisions, and three inherit it from their workspace. None is at c5ccf99 or 9c3b692, the migration commits.
++
++ Not measured.
++ - Which workers are the rename workers? Rename worker is meant here as a worker that moves existing Memory consumers to a new name or shape. No such worker was found in the repositories, and no assignment names one.
++ - What do tuple aliases mean? Tuple alias is not defined in any ethos-zero or memory-engine document. The engine's fixture holds a one-field newtype key with positional field names; whether that is meant is not known.
++
++ The questions. Name the workers meant by rename workers and what they are to rename; define tuple alias, with one example. Until the living answers, the coverage above is all that is known, and the frozen and legacy consumers stay as they are.
